@@ -7,130 +7,10 @@
 
 <title>Weather App</title>
 
-<link rel="stylesheet" href="wther-app.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
-
-<body>
-
-<main class="weather">
-
-    <!-- Header -->
-    <section class="header">
-
-        <div class="logo">
-            <img src="Glossy Sunny Cloud Weather Icon.png" alt="Weather Logo">
-        </div>
-
-        <div class="taxt">
-            <h1>Weather App</h1>
-            <p>Check Weather Of Any City</p>
-        </div>
-
-    </section>
-
-    <!-- Search Section -->
-    <section class="input-search">
-
-        <div class="city-name">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <input
-                type="text"
-                id="cityInput"
-                placeholder="Enter City Name..."
-            >
-
-            <button id="searchBtn" type="button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                Search
-            </button>
-
-            <button id="refreshBtn" type="button" title="Refresh Weather">
-                <i class="fa-solid fa-rotate"></i>
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- Recent Searches -->
-    <section class="recent-searches">
-
-        <h3>Recent Searches</h3>
-
-        <div id="recentCities"></div>
-
-    </section>
-
-    <!-- Main Weather Section -->
-    <section class="main-section">
-
-        <div class="main-logo">
-            <i id="weatherIcon" class="fa-solid fa-cloud-sun"></i>
-        </div>
-
-        <div class="pera">
-
-            <h1 id="temperature">24°C</h1>
-
-            <h3 id="weatherCondition">Partly Cloudy</h3>
-
-            <p id="cityName">
-                <i class="fa-solid fa-location-dot"></i>
-                New Delhi
-            </p>
-
-        </div>
-
-    </section>
-
-    <span class="boder"></span>
-
-    <!-- Weather Details -->
-    <section class="last">
-
-        <div class="humidity">
-
-            <h2>
-                <i class="fa-solid fa-droplet"></i>
-                Humidity
-            </h2>
-
-            <h1 id="humidityValue">65%</h1>
-
-        </div>
-
-        <div class="Wind">
-
-            <h2>
-                <i class="fa-solid fa-wind"></i>
-                Wind Speed
-            </h2>
-
-            <h1 id="windSpeed">12 km/h</h1>
-
-        </div>
-
-        <p id="lastUpdated">Last Updated: --</p>
-
-    </section>
-
-</main>
-
-<!-- Message -->
-<p id="message"></p>
-
-<script src="weather-app.js" defer></script>
-
-</body>
-</html>
-
-#CSS
-
-* {
+    <style>
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -548,10 +428,123 @@ p {
         text-align: center;
     }
 }
+</style>
 
-#JS
+</head>
 
-const cityInput = document.querySelector("#cityInput");
+<body>
+
+<main class="weather">
+
+    <!-- Header -->
+    <section class="header">
+
+        <div class="logo">
+            <img src="Glossy Sunny Cloud Weather Icon.png" alt="Weather Logo">
+        </div>
+
+        <div class="taxt">
+            <h1>Weather App</h1>
+            <p>Check Weather Of Any City</p>
+        </div>
+
+    </section>
+
+    <!-- Search Section -->
+    <section class="input-search">
+
+        <div class="city-name">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter City Name..."
+            >
+
+            <button id="searchBtn" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+
+            <button id="refreshBtn" type="button" title="Refresh Weather">
+                <i class="fa-solid fa-rotate"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Recent Searches -->
+    <section class="recent-searches">
+
+        <h3>Recent Searches</h3>
+
+        <div id="recentCities"></div>
+
+    </section>
+
+    <!-- Main Weather Section -->
+    <section class="main-section">
+
+        <div class="main-logo">
+            <i id="weatherIcon" class="fa-solid fa-cloud-sun"></i>
+        </div>
+
+        <div class="pera">
+
+            <h1 id="temperature">24°C</h1>
+
+            <h3 id="weatherCondition">Partly Cloudy</h3>
+
+            <p id="cityName">
+                <i class="fa-solid fa-location-dot"></i>
+                New Delhi
+            </p>
+
+        </div>
+
+    </section>
+
+    <span class="boder"></span>
+
+    <!-- Weather Details -->
+    <section class="last">
+
+        <div class="humidity">
+
+            <h2>
+                <i class="fa-solid fa-droplet"></i>
+                Humidity
+            </h2>
+
+            <h1 id="humidityValue">65%</h1>
+
+        </div>
+
+        <div class="Wind">
+
+            <h2>
+                <i class="fa-solid fa-wind"></i>
+                Wind Speed
+            </h2>
+
+            <h1 id="windSpeed">12 km/h</h1>
+
+        </div>
+
+        <p id="lastUpdated">Last Updated: --</p>
+
+    </section>
+
+</main>
+
+<!-- Message -->
+<p id="message"></p>
+
+<script>
+ const cityInput = document.querySelector("#cityInput");
 const searchBtn = document.querySelector("#searchBtn");
 const temperature = document.querySelector("#temperature");
 const weatherCondition = document.querySelector("#weatherCondition");
@@ -828,3 +821,8 @@ refreshBtn.addEventListener("click", function() {
     }
 
 });
+</script> 
+
+</body>
+</html>
+
